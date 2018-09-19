@@ -1,0 +1,26 @@
+{
+  "config": {
+    "target": "http://localhost:8000",
+    "phases": [{ "duration": 30, "arrivalRate": 100 }]
+  },
+  "scenarios": [
+    {
+      "flow": [
+        {
+          "loop": [
+            {
+              "post": {
+                "url": "/noop",
+                "form": {
+                  "title": "{{  $randomString() }}",
+                  "body": "{{  $randomString() }}"
+                }
+              }
+            }
+          ],
+          "count": 70
+        }
+      ]
+    }
+  ]
+}
