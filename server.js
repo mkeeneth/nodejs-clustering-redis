@@ -1,4 +1,5 @@
 // Lets cluster!
+require("dotenv").config();
 var cluster = require("cluster");
 
 // master process
