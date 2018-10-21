@@ -1,0 +1,27 @@
+{
+  "config": {
+    "target": "http://159.89.230.24:8000",
+    "phases": [{ "duration": 30, "arrivalRate": 100 }]
+  },
+  "scenarios": [
+    {
+      "flow": [
+        {
+          "loop": [
+            {
+              "post": {
+                "url": "/notes",
+                "form": {
+                  "userId": "{{$randomNumber(1,10000)}}",
+                  "title": "{{  $randomString() }}",
+                  "body": "{{  $randomString() }}"
+                }
+              }
+            }
+          ],
+          "count": 60
+        }
+      ]
+    }
+  ]
+}
