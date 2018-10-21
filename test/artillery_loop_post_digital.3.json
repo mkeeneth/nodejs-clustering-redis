@@ -1,7 +1,7 @@
 {
   "config": {
     "target": "http://104.248.225.255:8000",
-    "phases": [{ "duration": 30, "arrivalRate": 100 }]
+    "phases": [{ "duration": 30, "arrivalRate": 50 }]
   },
   "scenarios": [
     {

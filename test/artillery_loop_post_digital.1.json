@@ -1,7 +1,7 @@
 {
   "config": {
     "target": "http://159.89.230.24:8000",
-    "phases": [{ "duration": 30, "arrivalRate": 100 }]
+    "phases": [{ "duration": 30, "arrivalRate": 50 }]
   },
   "scenarios": [
     {
