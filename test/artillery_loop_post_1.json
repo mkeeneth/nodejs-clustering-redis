@@ -1,6 +1,6 @@
 {
   "config": {
-    "target": "http://localhost:8000",
+    "target": "http://ec2-18-221-137-10.us-east-2.compute.amazonaws.com:8000",
     "phases": [{ "duration": 30, "arrivalRate": 20 }]
   },
   "scenarios": [

@@ -2,6 +2,8 @@
 require("dotenv").config();
 var cluster = require("cluster");
 
+// security
+
 // master process
 if (cluster.isMaster) {
   // CPUs
@@ -21,8 +23,10 @@ if (cluster.isMaster) {
   // worker processes
 } else {
   const express = require("express");
+  const helmet = require("helmet");
   const bodyParser = require("body-parser");
   const app = express();
+  app.use(helmet()); // secure it
   const port = 8000;
 
   app.use(bodyParser.urlencoded({ extended: true }));
